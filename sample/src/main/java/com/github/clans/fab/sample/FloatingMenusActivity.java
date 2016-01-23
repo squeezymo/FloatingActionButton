@@ -203,7 +203,7 @@ public class FloatingMenusActivity extends AppCompatActivity {
     private View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            String text = "";
+            CharSequence text = "";
 
             switch (v.getId()) {
                 case R.id.fab1:

@@ -464,7 +464,7 @@ public class FloatingActionMenu extends ViewGroup {
     }
 
     private void addLabel(FloatingActionButton fab) {
-        String text = fab.getLabelText();
+        CharSequence text = fab.getLabelText();
 
         if (TextUtils.isEmpty(text)) return;
 
