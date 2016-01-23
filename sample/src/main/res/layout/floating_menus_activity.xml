@@ -43,6 +43,7 @@
         fab:menu_labels_style="@style/MenuLabelsStyle"
         fab:menu_labels_showAnimation="@anim/jump_from_down"
         fab:menu_labels_hideAnimation="@anim/jump_to_down"
+        fab:menu_labels_stretch="true"
         fab:menu_animationDelayPerItem="0"
         fab:menu_shadowColor="#444"
         fab:menu_colorNormal="#FFB805"

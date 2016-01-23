@@ -42,6 +42,7 @@
         <attr name="menu_labels_textSize" format="dimension" />
         <attr name="menu_labels_cornerRadius" format="dimension" />
         <attr name="menu_labels_showShadow" format="boolean" />
+        <attr name="menu_labels_stretch" format="boolean" />
         <attr name="menu_labels_colorNormal" format="color" />
         <attr name="menu_labels_colorPressed" format="color" />
         <attr name="menu_labels_colorRipple" format="color" />

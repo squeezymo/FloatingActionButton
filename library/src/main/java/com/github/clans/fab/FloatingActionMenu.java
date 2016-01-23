@@ -80,6 +80,7 @@ public class FloatingActionMenu extends ViewGroup {
     private Interpolator mCloseInterpolator;
     private boolean mIsAnimated = true;
     private boolean mLabelsSingleLine;
+    private boolean mLabelsStretch;
     private int mLabelsEllipsize;
     private int mLabelsMaxLines;
     private int mMenuFabSize;
@@ -157,6 +158,7 @@ public class FloatingActionMenu extends ViewGroup {
             mIcon = getResources().getDrawable(R.drawable.fab_add);
         }
         mLabelsSingleLine = attr.getBoolean(R.styleable.FloatingActionMenu_menu_labels_singleLine, false);
+        mLabelsStretch = attr.getBoolean(R.styleable.FloatingActionMenu_menu_labels_stretch, false);
         mLabelsEllipsize = attr.getInt(R.styleable.FloatingActionMenu_menu_labels_ellipsize, 0);
         mLabelsMaxLines = attr.getInt(R.styleable.FloatingActionMenu_menu_labels_maxLines, -1);
         mMenuFabSize = attr.getInt(R.styleable.FloatingActionMenu_menu_fab_size, FloatingActionButton.SIZE_NORMAL);
@@ -544,8 +546,10 @@ public class FloatingActionMenu extends ViewGroup {
 
     @Override
     protected MarginLayoutParams generateDefaultLayoutParams() {
-        return new MarginLayoutParams(MarginLayoutParams.WRAP_CONTENT,
-                MarginLayoutParams.WRAP_CONTENT);
+        return new MarginLayoutParams(
+                mLabelsStretch ? MarginLayoutParams.MATCH_PARENT : MarginLayoutParams.WRAP_CONTENT,
+                MarginLayoutParams.WRAP_CONTENT
+        );
     }
 
     @Override
